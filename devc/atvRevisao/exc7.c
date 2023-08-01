@@ -19,7 +19,7 @@ int main(){
         printf("Aprovado");
     } else
     if (media >= 3){
-        printf("EXAME! Deve tirar: %.2f no exame", (7.0 - media));
+        printf("EXAME! Deve tirar: %.2f no exame", (12.00 - media));
     } else
         printf(“Reprovado”);
 }

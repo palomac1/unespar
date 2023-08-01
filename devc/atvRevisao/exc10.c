@@ -10,7 +10,7 @@ int main() {
     }
 
     printf("\nOs números digitados foram:\n");
-    for (int k=0;k<10;k++){ //sdds POO
+    for (int k=0;k<10;k++){ 
         printf("%d\n",arr[k]);
     }
 }

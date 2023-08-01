@@ -5,7 +5,7 @@
 int main() {
  float idade, peso, altura, cont, media, pessoas190, pessoas150;
  media=0;
- cont=0;
+ cont=0; //cont = fazer contagem dentro de um if ou for
  pessoas190=0;
  pessoas150=0;
 
