@@ -15,5 +15,5 @@ int main(){
 	
 	media = ((3*x)+(2*y)+(4*z))/(3+2+4);
 	
-		printf("O aluno teve media %f:", media);
+		printf("O aluno teve media %.2f:", media);
 }
