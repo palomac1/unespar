@@ -3,19 +3,16 @@
 #include<stdio.h>
 #include<math.h> 
 int main(){
+    int numero[9];
 
-    int vetor[9], i;
-
-    for (i=0; i<9; i++){
-        printf("\n vetor[%d]: ",i);
-        scanf("%d",&vetor[i]);
-        scanf("%d", &vetor);
-        
-        if(i % 2 == 0){
-         printf("%d", i);
+    for (int i=0;i<9;i++){
+        scanf("%d",&numero[i]);
+    }
+    
+    for (int i=0;i<9;i++){
+        if (numero[i] % 2 == 0){
+            printf("Valor: %d\n",numero[i]);
+            printf("Indice: %d\n",i);           
         }
-    } 
-    
-        
-    
+    }
 }
