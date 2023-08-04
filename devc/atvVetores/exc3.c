@@ -1,3 +1,4 @@
+//ARRUMAR
 #include <stdio.h>
 #include <stdlib.h>
 #define NUM_JOGADAS 20

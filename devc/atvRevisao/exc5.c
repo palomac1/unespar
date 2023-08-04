@@ -9,7 +9,7 @@ int main(){
    printf("Digite o preco do convite R$ ");
    scanf("%f",&preco_convite);
    
-   qtidade_convite=cache/preco_convite;
+   qtidade_convite=ceil(cache/preco_convite);
 
    printf("Devem ser vendidos %.0f convites, para pelo menos atingir o custo do cache ", qtidade_convite);
 }

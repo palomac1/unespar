@@ -11,7 +11,9 @@ int main(){
     
     if(x>y){
         printf("O maior valor e %d", x);
-    }else{
+    }else if (y>x){
         printf("O maior valor e %d", y);
+    }else{
+        printf("Sao iguais.");
     }
 }
