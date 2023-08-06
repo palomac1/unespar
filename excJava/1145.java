@@ -1,21 +1,35 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class 1145{
-    public static void main(String[] args){
+public class 1145 {
+    public static void main(String[] args) throws IOException{
         Scanner s = new Scanner(System.in);
 
-        int x = s.nextInt();
-        int y = s.nextInt();
+        String linha = s.nextLine();
+        String[] valores = linha.split("\\s");
 
-        for(int i = 1; i <= y; i++){
-            System.out.println(i);
+        int x = Integer.parseInt(valores[0]);
+        int y = Integer.parseInt(valores[1]);
 
-            if(i % x == 0){
-                System.out.println(" ");
-            } else {
-                System.out.println(" ");
-            }
+        int inicial = 1;
+        int ultimo_numero = 0;
+        boolean t = true;
+
+        while(t){
+            for(int i = 0; i < x; i++){
+                System.out.print(inicial + " ");
+                if(inicial > ultimo_numero){
+                    ultimo_numero = inicial;
+                }
+
+                if(ultimo_numero == y){
+                    t = false;
+                    continue;
+                }else{
+                    inicial++;
+                }
+            }    
+            System.out.println();
         }
     }
 }
