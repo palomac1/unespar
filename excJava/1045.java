@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.util.Scanner;
-
 public class 1045 {
 	
 	public static void main(String[] args) throws IOException {
