@@ -11,7 +11,7 @@ int main(){
     }
 
     for(int i = 0; i < 9; i++){
-        if(vetor[i]  %2 == 0){
+        if(vetor[i] %2 == 0){
             printf("O numero %d eh par e esta localizado no vetor de posicao [%d]\n", vetor[i], i);
         }
     }
