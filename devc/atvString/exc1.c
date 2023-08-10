@@ -3,10 +3,16 @@
 #include <math.h>
 #include<stdio.h>
 int main() {
-  char nome[61];
-  
-  printf("Digite seu nome: ");
-  gets(nome);
-  
-  printf("O nome armazenado foi: %s", nome);
+    char nome[5][50];
+    
+    for(int i = 0; i < 5; i++){
+        printf("Digite um nome: ");
+        gets(nome[i]);
+    }
+    printf("\n");
+    printf("Nomes armazenados: \n");
+
+    for(int i = 0; i < 5; i++){
+        printf("%s\n", nome[i]);
+    }
 }

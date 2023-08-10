@@ -1,20 +1,20 @@
 //EXC 1
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <string.h>
 int main(){
+    char frase[50];
+    int qtd_vogal = 0;
 
-   int Vogais(char palavra[]) {
-     char vogais[] = "aeiouAEIOU"; 
-     int numVogais = 0, i, j; 
-     
-      for (i = 0; palavra[i] != '\0'; i++) { 
-        for (j = 0; vogais[j] != '\0'; j++) { 
-            if (vogais[j] == palavra[i]) { 
-                numVogais++; break; 
-            }
-        } 
-      } 
-        return numVogais; 
+    printf("Informe uma frase: ");
+    gets(frase);
+
+    for(int i = 0; i < strlen(frase); i++){
+        if(tolower(frase[i]) == tolower('a') || tolower(frase[i]) == tolower('e') || tolower(frase[i]) == tolower('i') || tolower(frase[i]) == tolower('o') || tolower(frase[i]) == tolower('u')){
+            qtd_vogal++;
+        }
     }
+
+    printf("Quantidade de vogais: %d\n", qtd_vogal);
 }
+
