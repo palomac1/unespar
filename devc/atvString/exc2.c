@@ -1,4 +1,4 @@
-//EXC 1
+//EXC 2
 #include <stdio.h>
 #include <math.h>
 #include<stdio.h>
