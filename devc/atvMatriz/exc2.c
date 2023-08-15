@@ -4,7 +4,7 @@
 int main() {
     int i,j; 
     float A[2][2], maior;
-     int matresult[][];
+     int B[0][0];
     
      printf("Digite uma matriz 2x2:\n"); 
      for (i=0; i<2; i++){ 	
@@ -23,11 +23,11 @@ int main() {
      }
      printf("\nO maior elemento da matriz eh: %.0f\n", maior);	
      
-    for (int i = 0; i < A; i++) {
-        for (int j = 0; j < A[i]; j++) {
-            matresult[i][j] = A[i][j] * maior;
+     
+    for (i = 0; i < A[i][j]; i++) {
+        for (j = 0; j < A[i][j]; j++) {
+            B[i][j] = A[i][j] * maior;
+            printf("O valor da matriz resultante é: %.0f\n ", B[i][j]);
         }
     }
-    
-    printf("O valor da matriz resultante é: %.0f\n ", matresult[i][j]);
 }
