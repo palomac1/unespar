@@ -19,7 +19,7 @@ int main(){
     Habitantes h[qtd];
 
     while (i != qtd){
-        printf("\nDigite o salário: ");
+        printf("\nDigite o salário da pessoa: ");
         scanf("%lf",&h[i].salario);
         total_sal += h[i].salario;
         maior_sal = h[i].salario;
@@ -27,7 +27,7 @@ int main(){
             maior_sal= h[i].salario;
         }
 
-        printf("\nDigite a idade: ");
+        printf("\nDigite a idade da pessoa: ");
         scanf("%d",&h[i].idade);
         menor_idade = h[i].idade;
 
@@ -37,10 +37,10 @@ int main(){
 
         if (h[i].idade == 0) break;
 
-        printf("\nDigite o sexo: ");
+        printf("\nDigite o sexo da pessoa: ");
         scanf("%s",&h[i].sexo);
 
-        printf("\nDigite o numero de filhos: ");
+        printf("\nDigite o numero de filhos da pessoa: ");
         scanf("%d",&h[i].num_filhos);
         total_filhos += h[i].num_filhos;
 
