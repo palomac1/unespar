@@ -13,10 +13,10 @@
 	typedef struct professor Professor;
 
 int main(){
-    Professor p[2]; 
+    Professor p[10]; 
     int contm, contf;
     
-	for(int i = 0; i < 2; i++){
+	for(int i = 0; i < 10; i++){
 		printf("Digite o codigo do professor: \n");
 		scanf("%d", &p[i].codigo);
 		fflush(stdin);
@@ -29,7 +29,7 @@ int main(){
 
     float X=0, Y=0;
 
-	for(int i = 0; i < 2; i++){
+	for(int i = 0; i < 10; i++){
 		 p[i].salariob = p[i].horas * 60.5;
 		if(p[i].horas < 70){
 		 p[i].desconto = (p[i].salariob * 8/100); 
