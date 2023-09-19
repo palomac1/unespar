@@ -36,6 +36,8 @@ public class Teste {
 			System.out.println("O que deseja fazer?");
 			System.out.println("1 - Cadastrar novo aluno");
 			System.out.println("2 - Listar alunos");
+			System.out.println("3 - Atualizar dados do aluno");
+			System.out.println("4 - Excluir aluno");
 			System.out.println("9 - Sair");
 			int opt = Integer.parseInt(s.nextLine());
 			switch(opt) {
