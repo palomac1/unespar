@@ -8,9 +8,9 @@ void maior (int num1, int num2) {
 	} else { 
 		printf("O segundo numero e maior. ");
 	}
-	
 }
-int main () {
+
+void main () {
 	int num1, num2;
 	printf("Apresente o primeiro numero: \n");
 	scanf("%d", &num1);
