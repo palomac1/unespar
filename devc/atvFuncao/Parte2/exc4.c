@@ -1,5 +1,4 @@
 #include<stdlib.h>
-#include<locale.h>
 
 	void vetor(int vet[25]){
 			for(int i = 0; i < 25; i++){

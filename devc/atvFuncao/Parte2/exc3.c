@@ -1,23 +1,21 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
+#include <stdio.h>
 
-void produto(float valorat, float valoran, float *percentual){
-		*percentual = ((valorat - valoran)*100) / valoran;
+void somar_divisores(int num,int *soma){
+    for (int i=1;i<=num;i++){
+        if (num % i == 0){
+            *soma += i;
+            printf("%d ",i);
+        }
+    }
+
 }
-	
-	int main(){
-		setlocale(LC_ALL, "Portuguese");
-		float valorat, valoran, percentual;
-		
-		printf("Digite o valor antigo desse produto: \n");
-		scanf("%f", &valoran);
-		printf("Digite o valor atual do produto: \n");
-		scanf("%f", &valorat);
-		
-		produto(valorat, valoran, &percentual);
-		
-		printf("O acréscimo percentual se deu em: %.2f%% \n", percentual);
-		
-		return 0;
+
+int main(){
+    int valor,soma;
+
+    printf("Um valor inteiro: ");
+    scanf("%d",&valor);
+
+    somar_divisores(valor,&soma);
+    printf("\nSoma dos divisores: %d",soma);
 }
