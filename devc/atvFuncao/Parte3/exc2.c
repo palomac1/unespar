@@ -15,25 +15,23 @@
 	
 	typedef struct Funcionario func;
 	
-	void Registro(func *f, int x){
-		
-		for(int i = 0; i < x; i++){
+	void Registro(func *f){
 		 
 		fflush(stdin);
 			
-		printf("Digite o nome: \n");
+		printf("Digite o nome do funcionario: \n");
 		gets(f->nome);
 		
-		printf("Digite o cpf: \n");
+		printf("Digite o cpf do funcionario: \n");
 		gets(f->cpf);
 		
-		printf("Digite a data de nascimento: \n");
+		printf("Digite a data de nascimento do funcionario: \n");
 		gets(f->datanasc);
 		
-		printf("Digite o cargo: \n");
+		printf("Digite o cargo do funcionario: \n");
 		gets(f->cargo);
 		
-		printf("Digite a idade: \n");
+		printf("Digite a idade do funcionario: \n");
 		scanf("%d", &f->idade);
 		
 		fflush(stdin);
@@ -44,23 +42,14 @@
 		printf("Digite o codigo do setor: \n");
 		scanf("%d", &f->codsetor);
 		
-		printf("Digite o salario: \n");
+		printf("Digite o salario do funcionario: \n");
 		scanf("%d", &f->salario);
 	}
-}
 	
 	int main() {
 		func funcionario;
-		int x;
 		
-		printf("Digite a quantidade de funcionarios: \n");
-		scanf("%d", &x);
-		
-		setbuf(stdin, NULL);
-		
-		Registro(&funcionario, x);
-		
-		for(int i = 0; i < x; i++){
+		Registro(&funcionario);
 			
 		printf("\nNome: %s\n", funcionario.nome);
 		printf("Idade: %d\n", funcionario.idade);
@@ -70,5 +59,6 @@
 		printf("Codigo do setor: %d\n", funcionario.codsetor);
 		printf("Cargo: %s\n", funcionario.cargo);
 		printf("Salario: %d\n", funcionario.salario);
+		
 		}
-	}
+	
