@@ -19,7 +19,7 @@ void cadProduto(struct Produto produtos[], int *numProdutos) {
         printf("Digite o codigo do produto: ");
         scanf("%d", &novoProduto.codigo);
         printf("Digite a descricao do produto: ");
-        scanf(" %[^\n]", novoProduto.desc);
+        scanf("%[^\n]", novoProduto.desc);
         printf("Digite o preco de compra do produto: ");
         scanf("%f", &novoProduto.precoCompra);
         printf("Digite o preco de venda do produto: ");
