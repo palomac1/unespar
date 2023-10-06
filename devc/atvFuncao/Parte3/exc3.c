@@ -9,8 +9,12 @@ struct Vendedor {
     float salarioFinal;
 };
 
+void Registrar(struct Vendedor *vendedor) {
 
-void calcularComissaoESalario(struct Vendedor *vendedor){
+    printf("Digite o salario fixo: ");
+    scanf("%f", &vendedor->salarioFixo);
+    printf("Digite o valor total de vendas: ");
+    scanf("%f", &vendedor->vendas);
     
     vendedor->comissao = 0.06 * vendedor->vendas;
     vendedor->salarioFinal = vendedor->salarioFixo + vendedor->comissao;
@@ -25,16 +29,12 @@ int main() {
     struct Vendedor vendedores[numFunc];
 
     for (int i = 0; i < numFunc; i++) {
-        printf("\nDigite o salario fixo do vendedor %d: ", i + 1);
-        scanf("%f", &vendedores[i].salarioFixo);
-        printf("Digite o valor total de vendas do vendedor %d: ", i + 1);
-        scanf("%f", &vendedores[i].vendas);
-
-        calcularComissaoESalario(&vendedores[i]);
+        printf("\nFuncionario %d:\n", i + 1);
+        Registrar(&vendedores[i]);
     }
 
     for (int i = 0; i < numFunc; i++) {
-        printf("\nVendedor %d:\n", i + 1);
+        printf("\nFuncionario %d\n", i + 1);
         printf("Salario Fixo: R$ %.2f\n", vendedores[i].salarioFixo);
         printf("Vendas: R$ %.2f\n", vendedores[i].vendas);
         printf("Comissao: R$ %.2f\n", vendedores[i].comissao);
@@ -43,5 +43,8 @@ int main() {
 
     return 0;
 }
+
+
+
 
 

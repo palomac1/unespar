@@ -77,13 +77,13 @@ int main() {
 
         switch (escolha) {
             case 1:
-                cadastrarProduto(produtos, &numProdutos);
+                cadProduto(produtos, &numProdutos);
                 break;
             case 2:
                 int codigo;
                 printf("Digite o codigo do produto: ");
                 scanf("%d", &codigo);
-                calcularLucro(produtos, numProdutos, codigo);
+                calculaLucro(produtos, numProdutos, codigo);
                 break;
             case 3:
                 prod_qtd_abaixo(produtos, numProdutos);
