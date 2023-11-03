@@ -1,74 +1,58 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-	
-	struct Funcionario{
-		char nome[30];
-		int idade;
-		char sexo;
-		char cpf[20];
-		char datanasc[20];
-		int codsetor;
-		char cargo[30];
-		int salario;
-	};
-	
-	typedef struct Funcionario func;
-	
-	void Registro(func *f, int x){
-		
-		for(int i = 0; i < x; i++){
-		 
-		fflush(stdin);
-			
-		printf("Digite o nome: \n");
-		gets(f->nome);
-		
-		printf("Digite o cpf: \n");
-		gets(f->cpf);
-		
-		printf("Digite a data de nascimento: \n");
-		gets(f->datanasc);
-		
-		printf("Digite o cargo: \n");
-		gets(f->cargo);
-		
-		printf("Digite a idade: \n");
-		scanf("%d", &f->idade);
-		
-		fflush(stdin);
-		
-		printf("Digite o sexo(M ou F): \n");
-		scanf("%c", &f->sexo);
-		
-		printf("Digite o codigo do setor: \n");
-		scanf("%d", &f->codsetor);
-		
-		printf("Digite o salario: \n");
-		scanf("%d", &f->salario);
-	}
+#include <stdio.h>
+#include <stdlib.h>
+
+    typedef struct habitantes{
+        double salario;
+        int idade;
+        char sexo;
+        int num_filhos;
+    } Habitantes;
+
+int main(){
+
+    int qtd, i=0;
+    double cont_sal_inferior=0.0;
+    double menor_idade = 0.0,total_sal = 0.0,total_filhos=0.0, maior_sal=0.0;
+
+    printf("Quantos usuários deseja cadastrar? \n ");
+    scanf("%d",&qtd);
+    Habitantes h[qtd];
+
+    while (i != qtd){
+        printf("\nDigite o salário da pessoa:\n ");
+        scanf("%lf",&h[i].salario);
+        total_sal += h[i].salario;
+        maior_sal = h[i].salario;
+        if (maior_sal> h[i].salario){
+            maior_sal= h[i].salario;
+        }
+
+        printf("\nDigite a idade da pessoa:\n ");
+        scanf("%d",&h[i].idade);
+        menor_idade = h[i].idade;
+
+        if (h[i].idade < menor_idade){
+            menor_idade = h[i].idade; 
+        }
+
+        if (h[i].idade == 0) break;
+
+        printf("\nDigite o sexo da pessoa (f ou m):\n ");
+        scanf("%s",&h[i].sexo);
+
+        printf("\nDigite o numero de filhos da pessoa:\n ");
+        scanf("%d",&h[i].num_filhos);
+        total_filhos += h[i].num_filhos;
+
+        if (h[i].salario < 300 && h[i].sexo == 'f') cont_sal_inferior++;
+        i++;
+        printf("\n");
+    }
+
+    printf("Média de mulheres com salário menor de 300 reais: %.2lf\n",cont_sal_inferior/i);
+    printf("Média de salário da população: %.2lf\n",total_sal/i);
+    printf("Média de número de filhos: %.2lf\n",total_filhos/i);
+    printf("Maior salário: %.2lf\n",maior_sal);
+    printf("Menor idade: %.2lf\n",menor_idade);
+
 }
-	
-	int main() {
-		func funcionario;
-		int x;
-		
-		printf("Digite a quantidade de funcionarios: \n");
-		scanf("%d", &x);
-		
-		setbuf(stdin, NULL);
-		
-		Registro(&funcionario, x);
-		
-		for(int i = 0; i < x; i++){
-			
-		printf("\nNome: %s\n", funcionario.nome);
-		printf("Idade: %d\n", funcionario.idade);
-		printf("Sexo: %c\n", funcionario.sexo);
-		printf("Cpf: %s\n", funcionario.cpf);
-		printf("Data de nascimento: %s\n", funcionario.datanasc);
-		printf("Codigo do setor: %d\n", funcionario.codsetor);
-		printf("Cargo: %s\n", funcionario.cargo);
-		printf("Salario: %d\n", funcionario.salario);
-		}
-	}
