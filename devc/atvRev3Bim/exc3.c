@@ -9,12 +9,10 @@
 		float autonomia;
 	}; typedef struct Frota frota;
 
-    // Função para calcular o valor gasto em combustível para uma viagem
 	float calculaCombustivel(float dist, float consumoPorKm) {
 	    return dist * consumoPorKm;
 	}
 	
-	// Função para calcular quantos tanques são necessários para percorrer uma certa distância
 	int calculaTanque(float dist, float autonomia) {
 	    return (int)(dist / autonomia) + 1; // Arredonda para cima
 	}
