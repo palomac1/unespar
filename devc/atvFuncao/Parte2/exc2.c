@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<math.h>
 
-void produto(float valorAtual, valorAntigo, float *percentual){	
+void produto(float valorAtual, float valorAntigo, float *percentual){	
     *percentual = (valorAtual - valorAntigo) * 100/valorAntigo;
 } 
 

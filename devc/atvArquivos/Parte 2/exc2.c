@@ -25,7 +25,7 @@ int main(){
     arqSaida = fopen(nomeArqSaida, "w");
 
     if (arqSaida == NULL) {
-        printf("Erro ao abrir o arquivo de entrada.\n");
+        printf("Erro ao abrir o arquivo de saida.\n");
         return 1;
     }
 
