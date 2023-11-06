@@ -1,38 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    FILE *arquivo;
-    char nomeArquivo[100];
+    FILE *arq;
+    char nomeArq[30];
     int filial;
     double valor;
     double totalVendas[4] = {0.0};
     int numVendas[4] = {0};
 
-    printf("Informe o nome do arquivo de vendas: ");
-    scanf("%s", nomeArquivo);
+    printf("Informe o nome do arquivo: ");
+    gets(nomeArq);
 
-    arquivo = fopen(nomeArquivo, "r");
+    arq = fopen(nomeArq, "r");
 
-    if (arquivo == NULL) {
+    if (arq == NULL) {
         printf("Não foi possível abrir o arquivo.\n");
         return 1;
     }
 
-    while (fscanf(arquivo, "%d,%lf", &filial, &valor) == 2) {
-        if (filial >= 1 && filial <= 4) {
-            totalVendas[filial - 1] += valor;
+    while (fscanf(arq, "%d,%lf", &filial, &valor) == 2) {
+        if (filial >= 1 && filial <= 4) { //-1 pois de 0 a 4 tem 5 e temos que voltar 1 casa no indice
+            totalVendas[filial - 1] += valor; //Acumula o valor das vendas para cada filial separadamente à medida que o programa lê o arq.
             numVendas[filial - 1]++;
         }
     }
 
-    fclose(arquivo);
+    fclose(arq);
 
     printf("Total e valor médio das vendas por filial:\n");
 
     for (int i = 0; i < 4; i++) {
         if (numVendas[i] > 0) {
             double media = totalVendas[i] / numVendas[i];
-            printf("Filial %d: Total: R$ %.2lf, Média: R$ %.2lf\n", i + 1, totalVendas[i], media);
+            printf("Filial %d:",  i + 1);
+            printf("Total: R$ %.2lf",  totalVendas[i]);
+            printf("Média: R$ %.2lf\n", media);
         } else {
             printf("Filial %d: Nenhuma venda registrada.\n", i + 1);
         }
