@@ -15,7 +15,7 @@ int main() {
     arq = fopen(nomeArq, "r");
 
     if (arq == NULL) {
-        printf("Não foi possível abrir o arquivo.\n");
+        printf("Nao foi possível abrir o arquivo.\n");
         return 1;
     }
 
@@ -28,14 +28,14 @@ int main() {
 
     fclose(arq);
 
-    printf("Total e valor médio das vendas por filial:\n");
+    printf("\nTotal e valor medio das vendas por filial:\n");
 
     for (int i = 0; i < 4; i++) {
         if (numVendas[i] > 0) {
             double media = totalVendas[i] / numVendas[i];
-            printf("Filial %d:",  i + 1);
-            printf("Total: R$ %.2lf",  totalVendas[i]);
-            printf("Média: R$ %.2lf\n", media);
+            printf("Filial %d \n",  i + 1);
+            printf("Total: R$ %.2lf\n",  totalVendas[i]);
+            printf("Media: R$ %.2lf\n", media);
         } else {
             printf("Filial %d: Nenhuma venda registrada.\n", i + 1);
         }
