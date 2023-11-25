@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void maiorElemento(int array[], int N) {
     int maiorValor = array[0];  // Inicializa com o primeiro elemento
