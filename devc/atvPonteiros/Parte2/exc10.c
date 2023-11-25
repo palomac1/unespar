@@ -40,7 +40,7 @@ int main() {
             printf("%d ", C[i]);
         }
     } else {
-        printf("A soma não pode ser realizada devido a tamanhos diferentes dos arrays.\n");
+        
     }
 
     return 0;
