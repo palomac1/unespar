@@ -1,15 +1,11 @@
-// ARRUMAR
-
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 int main(){
-    float A[10];
+    float numeros[10];
 
-    if(int i = 0; i < 10; i++){
-        printf("Endereco da posicao do array: %f", &i);
+    for(int i = 0; i < 10; i++){
+        printf("%p ", &numeros[i]);
     }
-
-    return 0;
+    printf("\n");
 }
 
