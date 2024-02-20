@@ -1,14 +1,10 @@
 #include <stdio.h>
 
-int main ()
-{
-
+int main (){
 
   unsigned short int n, maior, velocidade;
 
-  while (scanf("%hd", &n) != EOF)
-  {
-
+  while (scanf("%hd", &n) != EOF){
     int vetor[n];
     for (unsigned i = 0; i < n; i++)
       scanf("%d", &vetor[i]);
